@@ -1,0 +1,18 @@
+spring:
+    profiles.active: dev
+    application.name: @project.artifactId@
+
+    datasource:
+        url: jdbc:mysql://sharif-mysql.cvl7yevhx4s8.ap-southeast-1.rds.amazonaws.com/test
+        username: admin
+        password: sharif-mysql
+
+    jpa:
+        properties.hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
+        properties.hibernate.dialect.storage_engine: innodb
+        properties.hibernate.jdbc.batch_size: 20
+        properties.hibernate.order_inserts: true
+        hibernate.ddl-auto: validate
+
+server.servlet.context-path: /@project.artifactId@
+logging.file.path: /opt/bitnami/tomcat/logs
